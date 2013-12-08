@@ -1,5 +1,8 @@
 JetBlue::Application.routes.draw do
-  get "static_pages/login"
+  root 'static_pages#landing' 
+  match '/adventures', to: 'static_pages#adventures', via: 'get'
+  match '/login', to: 'static_pages#landing', via: 'get'    
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
