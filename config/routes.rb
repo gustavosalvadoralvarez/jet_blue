@@ -1,5 +1,5 @@
 JetBlue::Application.routes.draw do
-  root 'static_pages#landing' 
+  match '/', to: 'static_pages#landing', via: 'get' 
   match '/adventures', to: 'static_pages#adventures', via: 'get'
   match '/login', to: 'static_pages#landing', via: 'get'    
 
